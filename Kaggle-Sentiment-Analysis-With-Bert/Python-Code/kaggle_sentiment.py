@@ -43,7 +43,6 @@ tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
 print(tokenizer.tokenize("Hello, I'm a single sentence!"))
 print(tokenizer.vocab_size)
 
-from transformers import AutoTokenizer
 from torch.utils.data import Dataset, DataLoader
 import torch
 
@@ -87,10 +86,6 @@ for i, item in enumerate(dataLoader):
   if i == 1:
     break
 
-import torch
-from torch import nn
-from transformers import AutoModel
-from torch.utils.data import DataLoader # Ensure DataLoader is imported if not already in this cell
 from transformers import DataCollatorWithPadding
 from torch.cuda.amp import GradScaler, autocast
 import time
